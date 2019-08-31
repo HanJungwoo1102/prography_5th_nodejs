@@ -1,0 +1,18 @@
+{
+  "name": "prography_5th_nodejs",
+  "version": "1.0.0",
+  "description": "prography assignment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "lodash-id": "^0.14.0",
+    "lowdb": "^1.0.0"
+  }
+}
