@@ -1,9 +1,9 @@
 const express = require('express');
-const schedulesRouter = require('./routes/schedules.js');
+const todoesRouter = require('./routes/todoes.js');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 // body parser
 app.use(bodyParser.urlencoded({extended:false})); // body-parser를 사용해 application/x-www-form-urlencoded 파싱
@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('resource'));
 
 // router
-app.use('/schedules',schedulesRouter);
+app.use('/todoes',todoesRouter);
 
 app.get('/',(req,res)=>{
     res.render('index');

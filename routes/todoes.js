@@ -13,23 +13,23 @@ db._.mixin(lodashId);
 
 db.defaults({schedule:[]}).write();
 
-const schedule_db = db.get('schedule');
+const schedule_db = db.get('todo');
 
 //============================================================
 // GET
 router.get('/',(req,res)=>{
-    // Get All Schedules
+    // Get All Todoes
     res.send(schedule_db.value());
 });
 router.get('/:id',(req,res)=>{
-    // Get A Schedule For ID
+    // Get A Todo For ID
     const _id = req.params.id;
     res.send(schedule_db.find({id:_id}).value());
 })
 
 // POST
 router.post('/',(req,res)=>{
-    // Create New Schedule
+    // Create New Todo
     const _title = req.body.title;
     const _description = req.body.description;
     schedule_db.insert({title:_title,description:_description}).write();
@@ -38,7 +38,7 @@ router.post('/',(req,res)=>{
 
 // PUT
 router.put('/:id',(req,res)=>{
-    // Update A Schedule For ID
+    // Update A Todo For ID
     const _id = req.params.id;
     const _title = req.body.title;
     const _description = req.body.description;
@@ -47,7 +47,7 @@ router.put('/:id',(req,res)=>{
 
 // DELETE
 router.delete('/:id',(req,res)=>{
-    // Delete A Schedule For ID
+    // Delete A Todo For ID
     const _id = req.params.id;
     schedule_db.remove({id:_id}).write();
 });

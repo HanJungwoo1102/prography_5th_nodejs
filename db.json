@@ -1,5 +1,5 @@
 {
-  "schedule": [
+  "todo": [
     {
       "title": "hi",
       "description": "hello",
@@ -135,5 +135,6 @@
       "description": "hello",
       "id": "52bc5ec3-6409-4ff6-93b8-fe1a752f7f3f"
     }
-  ]
+  ],
+  "schedule": []
 }
