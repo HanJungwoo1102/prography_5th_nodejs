@@ -21,14 +21,16 @@ export default class App extends React.Component {
         this.getTodoList();
     }
 
-    getTodoList() {
+    async getTodoList() {
         const url = '/todoes';
-        // var res = await axios.get(url);
-        axios.get(url)
-            .then(function(res){
-                console.log(res.data);    
-            })
-            
+        var res = await axios.get(url);
+
+        console.log(res.data);
+
+        this.setState({
+            todoList: res.data
+        })
+        
     }
 
     render() {
